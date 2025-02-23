@@ -77,7 +77,7 @@ string decryptMessage(string encryptedMessage,
     int new_col = positions[i % 3].second;
 
     // (1 *2)
-    int shift = new_row * new_col;
+    int shift = (new_row * new_col) + (new_row + new_col) - (new_row ^ new_col);
 
     // Decryption Method:
     if (i % 2 == 0) {
@@ -98,7 +98,7 @@ string encryptMessage(string message, vector<pair<int, int>>& positions) {
     int row = positions[i % 3].first;
     int col = positions[i % 3].second;
 
-    int shift = (row * col);
+    int shift = (row * col) + (row + col) - (row ^ col);
 
     // Apply encryption
     // if index is even
