@@ -1,6 +1,3 @@
-// Samantha Ahorro
-// Project 1 (CPSC-253)
-
 #include <fstream>
 #include <iostream>
 #include <sstream>
